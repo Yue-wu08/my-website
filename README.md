@@ -3,7 +3,7 @@
 **Course:** INFO 1012 - Information Technology Systems  
 **Assignment:** 3.1 Web Page Development Portfolio  
 **Author:** Martin Chen (Student ID: 2518040114)  
-**GitHub Repository:** https://github.com/your-username/portfolio-site
+**GitHub Repository:** https://github.com/Yue-wu08/my-website
 
 ---
 
