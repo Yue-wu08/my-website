@@ -1,185 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Martin Chen | Personal Profile</title>
-  <link rel="icon" type="image/png" href="images/logo.png">
-
-  <!-- Google Fonts: Space Grotesk (headings) + Source Sans 3 (body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Chen | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- ================= Header with navigation ================= -->
-  <header class="site-header">
-    <div class="container nav-bar">
-      <a class="brand" href="index.html">
-        <img src="images/logo.png" alt="Martin Chen logo">
-        <span>Martin Chen</span>
-      </a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- ================= Hero: name, photo, tagline ================= -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-text">
-          <span class="eyebrow">Computer Science Student</span>
-          <h1>Hi, I'm <span class="name">Martin Chen</span></h1>
-          <p class="tagline">
-            A first-year computer science student at XAUAT-AHD, learning how to
-            build clean software and friendly web pages one line of code at a time.
-          </p>
-        </div>
-        <figure class="hero-photo">
-          <img src="images/profile.jpg" alt="Portrait of Martin Chen">
-          <figcaption>Profile photo</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- ================= About section ================= -->
-    <section id="about" class="section section-alt">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          My name is Chen Aoxiang, and I go by Martin. I study computer science in
-          Class 2501 at the Anhalt-Haitang Institute of XAUAT, a joint programme
-          with the University of Adelaide. I joined the programme in 2025 and have
-          been enjoying the mix of programming, design and maths courses.
-        </p>
-        <p>
-          I like taking things apart to understand how they work, then putting them
-          back together as something useful. Outside of class I spend time on web
-          projects, gaming and hands-on crafts. This page is my first attempt at
-          building a personal site with HTML and CSS.
-        </p>
-      </div>
-    </section>
-
-    <!-- ================= Skills section (HTML lists with CSS styling) ================= -->
-    <section id="skills" class="section">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-
-          <div class="skill-group">
-            <h3>Technical</h3>
-            <ul class="skill-list">
-              <li>Python programming</li>
-              <li>HTML and CSS</li>
-              <li>Git and command line</li>
-              <li>Excel data analysis and dashboards</li>
-              <li>UML and system modelling</li>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Martin<span>.dev</span></a>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-          </div>
-
-          <div class="skill-group">
-            <h3>Personal</h3>
-            <ul class="skill-list">
-              <li>Problem solving</li>
-              <li>Teamwork and communication</li>
-              <li>Self-directed learning</li>
-              <li>Attention to detail</li>
-              <li>Time management</li>
-            </ul>
-          </div>
-
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
-      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting">Hi, my name is</p>
+                <h1 class="hero-name">Martin Chen.</h1>
+                <h2 class="hero-title">I build things for the web.</h2>
+                <p class="hero-description">
+                    I'm a computer science student passionate about creating
+                    beautiful, functional, and user-centered digital experiences.
+                    Currently exploring web development and software engineering.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="avatar-circle">
+                    <span class="avatar-text">MC</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
     </section>
 
-    <!-- ================= Contact form ================= -->
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">01.</span> About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Hello! I'm Martin, a computer science student at Xi'an University of Architecture and Technology,
+                        jointly enrolled with the University of Adelaide through the Andeh College program.
+                        I enjoy the process of building things that live on the internet — whether that's websites,
+                        applications, or anything in between.
+                    </p>
+                    <p>
+                        My interest in web development started back when I decided to build my first personal website —
+                        it taught me a lot about HTML, CSS, and JavaScript. Fast forward to today,
+                        I've had the opportunity to work on various projects and continuously learn new technologies.
+                    </p>
+                    <p>
+                        I'm currently focused on improving my skills in front-end development, data structures,
+                        and computer systems. When I'm not coding, you can find me playing video games,
+                        exploring new tech gadgets, or watching movies.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="image-placeholder">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="100" cy="80" r="40" fill="var(--accent)"/>
+                                <ellipse cx="100" cy="160" rx="60" ry="40" fill="var(--accent)"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">02.</span> Skills</h2>
+            <p class="section-subtitle">Technologies and tools I've been working with</p>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Frontend</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML5</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">CSS3</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="70"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Programming</h3>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">C / C++</span>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="65"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Git & GitHub</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="70"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Tools</h3>
+                    <div class="tool-tags">
+                        <span class="tool-tag">VS Code</span>
+                        <span class="tool-tag">Linux</span>
+                        <span class="tool-tag">Windows</span>
+                        <span class="tool-tag">Markdown</span>
+                        <span class="tool-tag">Figma</span>
+                        <span class="tool-tag">Office</span>
+                        <span class="tool-tag">Canvas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title"><span class="section-number">03.</span> Projects</h2>
+            <p class="section-subtitle">Some things I've built</p>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-card-inner">
+                        <div class="project-top">
+                            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="GitHub Link">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.14.81 2.325 0 1.68-.015 3.03-.015 3.45 0 .315.225.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Personal Portfolio Website</h3>
+                        <p class="project-description">
+                            A responsive personal portfolio website built with HTML, CSS, and JavaScript
+                            to showcase projects and skills.
+                        </p>
+                        <ul class="project-tech">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="python">
+                    <div class="project-card-inner">
+                        <div class="project-top">
+                            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="GitHub Link">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.14.81 2.325 0 1.68-.015 3.03-.015 3.45 0 .315.225.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Data Analysis Tool</h3>
+                        <p class="project-description">
+                            A Python-based data analysis tool that processes CSV files and generates
+                            visual reports using matplotlib and pandas.
+                        </p>
+                        <ul class="project-tech">
+                            <li>Python</li>
+                            <li>Pandas</li>
+                            <li>Matplotlib</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-card-inner">
+                        <div class="project-top">
+                            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="GitHub Link">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.14.81 2.325 0 1.68-.015 3.03-.015 3.45 0 .315.225.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">To-Do List App</h3>
+                        <p class="project-description">
+                            A simple interactive to-do list application with local storage,
+                            allowing users to add, complete, and delete tasks.
+                        </p>
+                        <ul class="project-tech">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="other">
+                    <div class="project-card-inner">
+                        <div class="project-top">
+                            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="GitHub Link">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.14.81 2.325 0 1.68-.015 3.03-.015 3.45 0 .315.225.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Digital Logic Simulator</h3>
+                        <p class="project-description">
+                            A simulation of basic digital logic circuits built with C++,
+                            demonstrating logic gates and Boolean algebra.
+                        </p>
+                        <ul class="project-tech">
+                            <li>C++</li>
+                            <li>Data Structures</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="python">
+                    <div class="project-card-inner">
+                        <div class="project-top">
+                            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="GitHub Link">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.14.81 2.325 0 1.68-.015 3.03-.015 3.45 0 .315.225.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Chatbot Assistant</h3>
+                        <p class="project-description">
+                            A rule-based chatbot built in Python that can answer common questions
+                            and provide course information.
+                        </p>
+                        <ul class="project-tech">
+                            <li>Python</li>
+                            <li>NLP Basics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-card-inner">
+                        <div class="project-top">
+                            <svg class="folder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                            </svg>
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="GitHub Link">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.14.81 2.325 0 1.68-.015 3.03-.015 3.45 0 .315.225.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Landing Page Design</h3>
+                        <p class="project-description">
+                            A modern responsive landing page for a fictional product,
+                            focusing on UI/UX design principles.
+                        </p>
+                        <ul class="project-tech">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Responsive Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="section section-alt">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your name" required>
-          </div>
-
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" required>
-          </div>
-
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-          </div>
-
-          <button type="submit" class="btn">Send Message</button>
-          <p class="form-note">This is a front-end demo: no data leaves your browser.</p>
-          <div class="form-success" id="formSuccess">
-            Thanks! Your message has been recorded (demo only).
-          </div>
-        </form>
-      </div>
+        <div class="container">
+            <h2 class="section-title section-title-center"><span class="section-number">04.</span> Get In Touch</h2>
+            <p class="contact-description">
+                I'm currently looking for new opportunities and my inbox is always open.
+                Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            </p>
+            <div class="contact-form-container">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+                    <p class="form-status" id="form-status"></p>
+                </form>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <!-- ================= Footer with links ================= -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <h3>Martin Chen</h3>
-          <p>Computer science student building and learning on the web.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.14.81 2.325 0 1.68-.015 3.03-.015 3.45 0 .315.225.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="footer-text">Designed & Built by Martin Chen</p>
+            <p class="footer-year">&copy; 2026 All Rights Reserved</p>
         </div>
-        <div>
-          <h3>Navigate</h3>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Resources</h3>
-          <ul class="footer-links">
-            <li><a href="https://www.w3schools.com/" target="_blank" rel="noopener">W3Schools</a></li>
-            <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
-            <li><a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        &copy; 2026 Martin Chen. Built for INFO 1012.
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Front-end feedback for the contact form (no back-end in this assignment) -->
-  <script>
-    const form = document.getElementById("contactForm");
-    const success = document.getElementById("formSuccess");
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      if (form.checkValidity()) {
-        success.classList.add("show");
-        form.reset();
-      } else {
-        form.reportValidity();
-      }
-    });
-  </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
